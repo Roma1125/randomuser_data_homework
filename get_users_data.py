@@ -30,6 +30,6 @@ def get_users_data(data:dict) -> list:
 
 
 
-d=open('aaa.json', encoding='utf8').read()
+d=open('randomuser_data.json', encoding='utf8').read()
 dd=json.loads(d)
 print(get_users_data(dd))
