@@ -1,5 +1,6 @@
-from webbrowser import get
-import get_data
+
+
+import json
 
 def get_count_users(data:dict) -> int:
     """
@@ -10,4 +11,15 @@ def get_count_users(data:dict) -> int:
     Returns:
         int: number of users
     """
+    d=open(data,  'r', encoding='utf8').read()
+    dd=json.loads(d)
+
+    return len(dd['results'])
+
+print(get_count_users('aaa.json'))
+
+
+
+
+
     
