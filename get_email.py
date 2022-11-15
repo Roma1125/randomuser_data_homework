@@ -1,4 +1,4 @@
-import get_data
+import json
 
 def get_email(data:dict) -> list:
     """
@@ -9,3 +9,12 @@ def get_email(data:dict) -> list:
     Returns:
         list: users email
     """
+    r=[]
+    for i in range(len(data['results'])):
+        r.append(data['results'][i]['email'])
+    return r
+
+
+d=open('aaa.json', encoding='utf8').read()
+dd=json.loads(d)
+print(get_email(dd))
