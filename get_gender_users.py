@@ -17,9 +17,9 @@ def get_gender_users(data:dict) -> list:
     for i in range(len(data['results'])):
         s={}
         if data['results'][i]['gender']=='male':
-            s[data['results'][i]['gender']]=1
+            s[data['results'][i]['gender'].title()]=1
         elif data['results'][i]['gender']=='female':
-            s[data['results'][i]['gender']]=0
+            s[data['results'][i]['gender'].title()]=0
 
         r.append(s)
     return r
