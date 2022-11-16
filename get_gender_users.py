@@ -1,4 +1,4 @@
-import get_data
+import json
 
 def get_gender_users(data:dict) -> list:
     """
@@ -13,3 +13,12 @@ def get_gender_users(data:dict) -> list:
     Returns:
         list: users get gender list
     """
+    r=[]
+    for i in range(len(data['results'])):
+        r.append(data['results'][i]['gender'])
+    return r
+
+
+d=open('aaa.json', encoding='utf8').read()
+dd=json.loads(d)
+print(get_gender_users(dd))
