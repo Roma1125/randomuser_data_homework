@@ -15,10 +15,10 @@ def get_count_users(data:dict) -> int:
     dd=json.loads(d)
 
     return len(dd['results'])
-
+       
 print(get_count_users('randomuser_data.json')) 
 
-
+  
 
 
 
