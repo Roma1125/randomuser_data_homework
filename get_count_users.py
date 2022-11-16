@@ -11,12 +11,13 @@ def get_count_users(data:dict) -> int:
     Returns:
         int: number of users
     """
-    d=open(data,  'r', encoding='utf8').read()
-    dd=json.loads(d)
-
-    return len(dd['results'])
+    
+    return len(data['results'])
+d=open('randomuser_data.json',  'r', encoding='utf8').read()
+dd=json.loads(d)
+  
        
-print(get_count_users('randomuser_data.json')) 
+print(get_count_users(dd)) 
 
   
 
