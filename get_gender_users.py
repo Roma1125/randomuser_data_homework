@@ -20,5 +20,5 @@ def get_gender_users(data:dict) -> list:
 
 
 d=open('randomuser_data.json', encoding='utf8').read()
-dd=json.loads(d)
+dd=json.loads(d)  
 print(get_gender_users(dd))
