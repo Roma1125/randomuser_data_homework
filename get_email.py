@@ -9,13 +9,13 @@ def get_email(data:dict) -> list:
     Returns:
         list: users email
     """
-    d=open(data, encoding='utf8').read()
-    dd=json.loads(d)
+ 
     r=[]
-    for i in range(len(dd['results'])):
-        r.append(dd['results'][i]['email'])
+    for i in range(len(data['results'])):
+        r.append(data['results'][i]['email'])
     return r
 
+d=open('randomuser_data.json', encoding='utf8').read()
+dd=json.loads(d)
 
-
-print(get_email('randomuser_data.json'))
+print(get_email(dd))
